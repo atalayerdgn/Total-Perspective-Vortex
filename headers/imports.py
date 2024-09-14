@@ -4,7 +4,7 @@ import seaborn as sns
 import sklearn as sk
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA as skPCA # for comparison
-from sklearn.base import BaseEstimator, TransformerMixin, ClassifierMixin
+from sklearn.base import BaseEstimator, TransformerMixin, ClassifierMixin, accuracy_score
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 #########UTILS IMPORTS##########
@@ -23,7 +23,7 @@ from pipeline.pipeline import Pipeline
 #########IMPLEMENTATIONS IMPORTS##########
 from implementations.pca import pca
 from implementations.wform import WForm
-from implementations.classifier import Classifier
+from implementations.classifier import SVMClassifier
 #########TRAIN_TEST IMPORTS##########
 from train_test.train import Train
 from train_test.test import Test

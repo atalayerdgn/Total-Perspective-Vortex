@@ -8,7 +8,7 @@ class Pipeline(pipeline_utils, BaseEstimator, TransformerMixin):
         pipeline = Pipeline([
     ('playback', DataPlayback(file_path='path_to_data_file.npy')),  # Replace with actual file path
     ('dim_reduction', pca(n_components=10)),
-    ('classifier', Classifier())  # Replace with your preferred classification algorithm
+    ('classifier', SVMClassifier())  # Replace with your preferred classification algorithm
 ])
         return pipeline
     def execute_pipeline(self, pipeline, X_train, y_train, X_test, y_test):
