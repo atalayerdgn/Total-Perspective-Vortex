@@ -3,6 +3,7 @@ import numpy as np
 import seaborn as sns
 import sklearn as sk
 import matplotlib.pyplot as plt
+import pywt
 from sklearn.decomposition import PCA as skPCA # for comparison
 from sklearn.base import BaseEstimator, TransformerMixin, ClassifierMixin, accuracy_score
 from sklearn.pipeline import Pipeline
@@ -15,17 +16,16 @@ from utils.visualizer import Visualizer
 from utils.pre_utils import pre_utils
 from utils.optimizer import HyperparameterOptimizer
 from utils.ttutils import ttutils
+from utils.classifier_utils import classifier_utils
 #########PREPROCESSING IMPORTS##########
-from preprocessing.parse import Parser
-from preprocessing.transform import Transformer
+from preprocessing.ADC import ADC
+from preprocessing.DSP import DSP
 #########PIPELINE IMPORTS##########
 from pipeline.pipeline import Pipeline
 #########IMPLEMENTATIONS IMPORTS##########
 from implementations.pca import pca
-from implementations.wform import WForm
-from implementations.classifier import SVMClassifier
+from implementations.classifier import Iclassifier
 #########TRAIN_TEST IMPORTS##########
 from train_test.train import Train
 from train_test.test import Test
-
 
